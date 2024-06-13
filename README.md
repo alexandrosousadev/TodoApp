@@ -66,6 +66,7 @@ Uma aplicação de lista de tarefas para gerenciar suas atividades diárias.
 ## Estrutura do Projeto
 
 TodoApp
+
 ├── src
 
 │ ├── main
@@ -96,14 +97,21 @@ TodoApp
 
 
 ├── scripts
+
 │ ├── setup.sh
+
 │ ├── start.sh
+
 │ ├── setup.bat
+
 │ └── start.bat
 
 ├── pom.xml
+
 ├── README.md
+
 └── target
+
 └── TodoApp.jar
 
 
