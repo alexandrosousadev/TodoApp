@@ -67,28 +67,45 @@ Uma aplicação de lista de tarefas para gerenciar suas atividades diárias.
 
 TodoApp
 ├── src
+
 │ ├── main
+
 │ │ ├── java
+
 │ │ │ └── com
+
 │ │ │ └── example
+
 │ │ │ └── todo
+
 │ │ │ ├── controller
+
 │ │ │ │ └── TodoController.java
+
 │ │ │ ├── model
+
 │ │ │ │ └── Todo.java
+
 │ │ │ └── service
+
 │ │ │ └── TodoService.java
+
 │ │ └── resources
+
 │ │ └── application.properties
+
+
 ├── scripts
 │ ├── setup.sh
 │ ├── start.sh
 │ ├── setup.bat
 │ └── start.bat
+
 ├── pom.xml
 ├── README.md
 └── target
 └── TodoApp.jar
+
 
 ## Contribuição
 
