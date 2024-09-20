@@ -1,11 +1,17 @@
-# Use a imagem oficial do Java (escolha a versão necessária para o seu projeto)
+# Use a imagem oficial do Java
 FROM openjdk:17-jdk-slim
 
-# Define o diretório de trabalho no container
+# Defina o diretório de trabalho no container
 WORKDIR /app
 
+# Copia o código fonte do projeto para o container
+COPY . /app
+
+# Execute o build usando Gradle para gerar o JAR
+RUN ./gradlew build
+
 # Copia o arquivo JAR gerado pelo build para o container
-COPY target/seu-jar-file.jar /app/app.jar
+COPY build/libs/*.jar /app/app.jar
 
 # Comando para rodar a aplicação
 CMD ["java", "-jar", "app.jar"]
