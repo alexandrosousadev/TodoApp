@@ -1,18 +1,34 @@
+// Plugins
 apply plugin: 'java'
 apply plugin: 'jacoco'
 apply plugin: 'application'
 
-
+// Definir a classe principal
 mainClassName = 'TodoApp2.Main'
 
+// Definir a versão do Java
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+// Repositórios para dependências
 repositories {
     jcenter()
 }
 
+// Dependências do projeto
 dependencies {
-    testImplementation     'junit:junit:4.13'
-    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+    // Dependência para testes
+    testImplementation 'junit:junit:4.13'
 
+    // MySQL Connector para comunicação com banco de dados
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
 }
 
+// Tarefa para criar o arquivo JAR executável
+jar {
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+}
